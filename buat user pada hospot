@@ -1,1 +1,3 @@
-
+ip hospot user add name=contoh password=123
+ip hospot user add name=contoh2 password=123
+ip hospot user add name=contoh3 password=123
