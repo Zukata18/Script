@@ -1,0 +1,19 @@
+int wireless edit 0 (pasti 0)/(tergantung router)
+value-name=ssid
+int wireless edit 0
+  value-name=mode (ganti ap-bridge)
+  ip hospot setup 
+hotspot interface: wlan1
+Set HotSpot address for interface 
+local address of network: 192.168.9.1/24(ip bebas sesuka kalian)
+lalu enter saja sampai muncul 
+select certificate: import-other-certificate diganti menjadi none
+ip address of smtp server: 0.0.0.0 (biarkan saja seperti itu)
+Setup DNS configuration 
+dns servers: 8.8.8.8 (isi sesuai dns yg dipakai disini saya mengguankan dns goolge)
+DNS name of local hotspot server 
+dns name: farel.sch.id(isi dns web kalian sesuka kalian bisa menggunakan .com .net ataupun .sch.id
+Create local hotspot user 
+name of local hotspot user: admin
+  passwordnya kosongkan saja
+
