@@ -10,7 +10,7 @@ lalu enter saja sampai muncul
 select certificate: import-other-certificate diganti menjadi none
 ip address of smtp server: 0.0.0.0 (biarkan saja seperti itu)
 Setup DNS configuration 
-dns servers: 8.8.8.8 (isi sesuai dns yg dipakai disini saya mengguankan dns goolge)
+dns servers: 8.8.8.8 (isi sesuai dns yg dipakai disini saya menggunakan dns google)
 DNS name of local hotspot server 
 dns name: farel.sch.id(isi dns web kalian sesuka kalian bisa menggunakan .com .net ataupun .sch.id
 Create local hotspot user 
