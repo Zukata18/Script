@@ -1,0 +1,4 @@
+ip hospot user profile add name=siswa shared-user=100 rate-limit=5M/5M
+KETERANGAN 
+shared user adalah menentukan banyak user pada 1 akun disini saya membuat 1 akun untuk 100 orang 
+rate limit adalah untuk membatasi kecepatan internet mbps pada hospot wifi kita disini saya membatasi bandwirh nya pada 5Mbps untuk 100 org
