@@ -16,4 +16,6 @@ dns name: farel.sch.id(isi dns web kalian sesuka kalian bisa menggunakan .com .n
 Create local hotspot user 
 name of local hotspot user: admin
   passwordnya kosongkan saja
-
+ip hospot profile edit 1(pasti 1 karena baru dibuat setelah hospot setup)
+value-name=login-by 
+cookie,(dihapus)
