@@ -1,4 +1,5 @@
 routing ospf network add area=backbone network=yg ada di ip address bagian network karena tidak perlu mnggunakan host tulis saja beserta (/) nya
+routing biasanya digunakan untuk menyambunhkan 2 router atau lebih dan pengganti firewall nat di router ke 2 
 contoh
 routing ospf network add area=backbone network=192.168.0.0/24 (ether1)
 routing ospf network add area=backbone network=21.21.21.0/24  (ether2)
