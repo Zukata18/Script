@@ -12,7 +12,7 @@ lalu cari wlan1 masuk kedalam lalu scan cari nama hospot yg kamu pakai dan di co
 setelah tanda pada wlan R kamu sudah bisa mulai konfigurasi seperti biasa menggunakan internet sendiri 
 
 system identity set name=R1(contoh)
-ip dhcp-client interface=wlan1
+ip dhcp-client add interface=wlan1
 ip dhcp-client en 0
 ip address add address=21.21.21.1/24(contoh) interface=ether1(jika kabel kamu di ether1 pad mikrotik)
 ip firewall Nat add chain=srcnat action=masquarade 
