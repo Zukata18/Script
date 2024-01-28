@@ -1,0 +1,2 @@
+Ip firewall filter add chain=input action=drop src-address=(ip ether yg ke client/pc kalian) 
+good luck
