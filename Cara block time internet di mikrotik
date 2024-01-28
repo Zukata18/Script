@@ -1,0 +1,1 @@
+system ntp client set enable=yes primary-ntp=203.160.128.3(ini adalah ip server ntp indo)
