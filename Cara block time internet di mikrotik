@@ -1,1 +1,2 @@
 system ntp client set enable=yes primary-ntp=203.160.128.3(ini adalah ip server ntp indo)
+ip firewall filter add chain=forward action=drop extra (timenya sesuai kan dengan kebutuhan)
