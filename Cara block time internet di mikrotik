@@ -1,4 +1,4 @@
-system ntp client set enable=yes primary-ntp=203.160.128.3(ini adalah ip server ntp indo)
+system ntp client set enable=yes primary-ntp=203.160.128.3 server-dns-name=0.id.pool.ntp.org (ini adalah ip server ntp indo)
 ip firewall filter add chain=forward action=drop time=15:00:00-20:00:00,fri,mon,sun,sat,sun,rhu,tue,wed
 (harinya di seusai kan saja tidak ush di pakai semua beserta timenya sesuai kebutuhan)
 (untuk harinya menggunakan bahasa inggris yg di singkat)
