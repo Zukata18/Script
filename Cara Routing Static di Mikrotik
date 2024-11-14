@@ -11,7 +11,7 @@ routing ospf network add area=bacbone network=172.23.21.0/24
 routing ospf network add area=bacbone network=19.19.19.0.0/24
 
 #lanjut kita setting dns dan gatewaynya
-ip dns set servers=8.8.8.8(dns yang saya gunakan adalah defaul dari isp saya)
+ip dns set servers=8.8.8.8 allowed-remote=yes(dns yang saya gunakan adalah defaul dari isp saya)
 ip route add gateway=192.168.100.1(gateway dari isp saya pastikan saat di ip route pr berlambangkan AS yang brarti sudah terkoneksi)
 #cara mengetahui gateway isp kita sambungkan kabel lan sebelum ke mikrotik ke laptop/pc kita terlebh dahulu lalu buka cmd ketikkan (ipconfig) nantinya kalian tau gateway dari isp kalian
 
