@@ -4,7 +4,7 @@ ip address add int=eth2 address=172.23.21.1/24(gateway untuk ruter selanjutnya)
 ip address add int=eth3 address=19.19.19.1/24(alamat untuk ke laptop/pc saya)
 
 #setelah itu kita lanjut ke firewall terlebih dahulu
-ip farewall add chain=srcnat action=masquarade
+ip farewall nat add chain=srcnat action=masquarade
 
 #lalu saya routing terlebih dahulu
 routing ospf network add area=bacbone network=172.23.21.0/24
