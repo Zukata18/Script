@@ -1,19 +1,20 @@
 #Pertama tama buat ip addres dulu 
-ip address add int=eth1 address=192.168.100.21/24
-ip address add int=eth2 address=172.23.21.1/24(gateway untuk ruter selanjutnya)
-ip address add int=eth3 address=19.19.19.1/24(alamat untuk ke laptop/pc saya)
+ip address add int=ether1 address=192.168.1.2/24 (ISP dari internet di lab atau di hospot kalian, pastikan belakang nya jangan di samakan dengan ISP)
+ip address add int=ether2 address=192.168.10.1/24 (IP bebas dari kalian buat ke pc)
+ip address add int=ether3 address=12.12.12.1/24 (gateway untuk ruter selanjutnya)
+
+#lanjut kita setting dns dan gatewaynya
+ip dns set servers=8.8.8.8 allowed-remote=yes(dns yang saya gunakan adalah defaul dari isp saya)
+ip route add gateway=192.168.1.1(gateway dari isp saya pastikan saat di ip route pr berlambangkan AS yang brarti sudah terkoneksi)
+#cara mengetahui gateway isp kita sambungkan kabel lan sebelum ke mikrotik ke laptop/pc kita terlebh dahulu lalu buka cmd ketikkan (ipconfig) nantinya kalian tau gateway dari isp kalian
 
 #setelah itu kita lanjut ke firewall terlebih dahulu
 ip farewall nat add chain=srcnat action=masquarade
 
 #lalu saya routing terlebih dahulu
-routing ospf network add area=bacbone network=172.23.21.0/24
-routing ospf network add area=bacbone network=19.19.19.0.0/24
+routing ospf network add area=bacbone network=192.168.1.0/24
+routing ospf network add area=bacbone network=12.12.12.0/24
 
-#lanjut kita setting dns dan gatewaynya
-ip dns set servers=8.8.8.8 allowed-remote=yes(dns yang saya gunakan adalah defaul dari isp saya)
-ip route add gateway=192.168.100.1(gateway dari isp saya pastikan saat di ip route pr berlambangkan AS yang brarti sudah terkoneksi)
-#cara mengetahui gateway isp kita sambungkan kabel lan sebelum ke mikrotik ke laptop/pc kita terlebh dahulu lalu buka cmd ketikkan (ipconfig) nantinya kalian tau gateway dari isp kalian
 
 ip dhcp-server setup 
 ether2 dan ether3 (ini hanya contoh tergantung kalian setting) 
