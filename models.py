@@ -32,23 +32,26 @@ def get_all_mahasiswa():
 
 def get_mahasiswa_by_id(mahasiswa_id):
     conn = get_db_connection()
-    mahasiswa = conn.execute('SELECT * FROM mahasiswa WHERE id = ?',(mahasiswa_id,)).fetchone()
+    mahasiswa = conn.execute('SELECT * FROM mahasiswa WHERE id = ?', (mahasiswa_id,)).fetchone()
     conn.close()
     return mahasiswa
 
-def add_mahasiswa_db(nama,nim):
+def add_mahasiswa_db(nama, nim):
     conn = get_db_connection()
     try:
         conn.execute('INSERT INTO mahasiswa (nama, nim) VALUES (?, ?)', (nama, nim))
         conn.commit()
     except sqlite3.IntegrityError:
         conn.close()
-        return True
-    
+        return False
+    conn.close()
+    return True
+
 def update_mahasiswa_db(mahasiswa_id, nama, nim):
     conn = get_db_connection()
     try:
         conn.execute('UPDATE mahasiswa SET nama = ?, nim = ? WHERE id = ?', (nama, nim, mahasiswa_id))
+        conn.commit()
     except sqlite3.IntegrityError:
         conn.close()
         return False
@@ -63,7 +66,7 @@ def delete_mahasiswa_db(mahasiswa_id):
 
 def count_mahasiswa():
     conn = get_db_connection()
-    count = conn.execute("SELECT COUNT(id) FROM mahasiswa").fetchone()[0]
+    count = conn.execute('SELECT COUNT(id) FROM mahasiswa').fetchone()[0]
     conn.close()
     return count
 
